@@ -32,7 +32,7 @@ MongoClient.connect('mongodb://localhost:27017/Chat_App', (err, Database) => {
     const db = Database.db("Chat_App");
     users = db.collection("users");
     chatRooms = db.collection("chatRooms");
-    const server = app.listen(port, '10.0.0.22', () => {
+    const server = app.listen(port, '0.0.0.0', () => {
         console.log("Server started on port " + port + "...");
     });
     const io = socket.listen(server);
